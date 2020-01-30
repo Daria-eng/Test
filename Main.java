@@ -1,25 +1,17 @@
 package com.company;
-import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        Tree tree = new Tree();
+        tree.insert(3, "John");
+        tree.insert(8, "T1000");
+ tree.insert(1, "Sara");
+        tree.insert(2, "T800");
 
-Scanner in =new Scanner(System.in);
-
-System.out.println("Please input day of week");
-
-        String day = in.nextLine().trim().toLowerCase();
-
-        DayResolver.WorkOrWeekend(day);
-
-        System.out.println("Please input work or weekend");
-
-        String dayType = in.nextLine().trim().toLowerCase();
-
-        DayResolver.WhatDays(dayType);
-
+        Node findJohn = tree.find(3);
+        findJohn.printNode();
+        tree.print(findJohn);
     }
 }
